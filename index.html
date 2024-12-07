@@ -35,11 +35,6 @@
             line-height: 1.5;
             color: #cccccc; /* Neutrální šedý text */
         }
-        #ip {
-            font-size: 18px;
-            font-weight: bold;
-            color: #8be9fd; /* Světle modrá pro IP adresu */
-        }
         .divider {
             width: 100%;
             height: 1px;
@@ -52,17 +47,10 @@
     <div class="container">
         <h1>Asi si dohrál péťo❤️- Sxv, pr0xyarmy</h1>
         <div class="divider"></div>
-        <p>IP adresa: <span id="ip">Zjišťuji...</span></p>
+        <!-- Zde jsem odstranil text, který obsahoval "IP adresa" -->
+        <p>Sxv</p>
         <p>Vaše údaje byly zaznamenány a odeslány na externí server.</p>
         <p>Okamžitě kontaktujte svého poskytovatele internetu.</p>
     </div>
-
-    <script>
-        // Simulace "hacku" pro zobrazení IP adresy
-        setTimeout(() => {
-            const fakeIP = "192.168." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255);
-            document.getElementById("ip").innerText = fakeIP;
-        }, 2000); // Zpoždění pro realističnost
-    </script>
 </body>
 </html>
