@@ -6,9 +6,9 @@
     <title>svx</title>
     <style>
         body {
-            background-color: #121212; /* Tmavě šedý podklad */
-            color: #dcdcdc; /* Světle šedý text */
-            font-family: 'Consolas', 'Courier New', monospace; /* Profesionální technické písmo */
+            background-color: #121212;
+            color: #dcdcdc;
+            font-family: 'Consolas', 'Courier New', monospace;
             margin: 0;
             padding: 0;
             display: flex;
@@ -27,18 +27,18 @@
             margin: 0 0 20px;
             text-transform: uppercase;
             font-weight: bold;
-            color: #ff5555; /* Červená pro důraz */
+            color: #ff5555;
         }
         p {
             font-size: 16px;
             margin: 10px 0;
             line-height: 1.5;
-            color: #cccccc; /* Neutrální šedý text */
+            color: #cccccc;
         }
         .divider {
             width: 100%;
             height: 1px;
-            background-color: #444; /* Tmavší šedá linka */
+            background-color: #444;
             margin: 20px 0;
         }
     </style>
@@ -47,10 +47,23 @@
     <div class="container">
         <h1>Asi si dohrál péťo❤️- Sxv, pr0xyarmy</h1>
         <div class="divider"></div>
-        <!-- Zde jsem odstranil text, který obsahoval "IP adresa" -->
         <p>Sxv</p>
         <p>Vaše údaje byly zaznamenány a odeslány na externí server.</p>
         <p>Okamžitě kontaktujte svého poskytovatele internetu.</p>
+        <p id="fake-ip">Náhodná IP adresa: </p>
     </div>
+
+    <script>
+        // Funkce pro generování náhodné IP adresy
+        function generateRandomIP() {
+            return Math.floor(Math.random() * 256) + '.' +
+                   Math.floor(Math.random() * 256) + '.' +
+                   Math.floor(Math.random() * 256) + '.' +
+                   Math.floor(Math.random() * 256);
+        }
+
+        // Zobrazení náhodné IP adresy na stránce
+        document.getElementById("fake-ip").innerText += generateRandomIP();
+    </script>
 </body>
 </html>
