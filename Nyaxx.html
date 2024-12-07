@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaše IP adresa byla zachycena</title>
+    <style>
+        body {
+            background-color: #121212; /* Tmavě šedý podklad */
+            color: #dcdcdc; /* Světle šedý text */
+            font-family: 'Consolas', 'Courier New', monospace; /* Profesionální technické písmo */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 90%;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 0 0 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #ff5555; /* Červená pro důraz */
+        }
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+            line-height: 1.5;
+            color: #cccccc; /* Neutrální šedý text */
+        }
+        #ip {
+            font-size: 18px;
+            font-weight: bold;
+            color: #8be9fd; /* Světle modrá pro IP adresu */
+        }
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: #444; /* Tmavší šedá linka */
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vaše IP adresa byla zachycena</h1>
+        <div class="divider"></div>
+        <p>IP adresa: <span id="ip">Zjišťuji...</span></p>
+        <p>Vaše údaje byly zaznamenány a odeslány na externí server.</p>
+        <p>Okamžitě kontaktujte svého poskytovatele internetu.</p>
+    </div>
+
+    <script>
+        // Simulace "hacku" pro zobrazení IP adresy
+        setTimeout(() => {
+            const fakeIP = "192.168." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255);
+            document.getElementById("ip").innerText = fakeIP;
+        }, 2000); // Zpoždění pro realističnost
+    </script>
+</body>
+</html>
